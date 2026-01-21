@@ -287,7 +287,7 @@ export default function FinanceDashboard() {
                 ? 'text-green-600'
                 : 'text-red-600'
             }`}>
-              ${(summary.outstandingReceivables - summary.outstandingPayables).toFixed(2)}
+              {(summary.outstandingReceivables - summary.outstandingPayables).toFixed(2)} TD
             </span>
           </div>
           {summary.totalSales > 0 && (

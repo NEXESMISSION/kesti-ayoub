@@ -105,11 +105,11 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 px-4">
       <div className="w-full max-w-md">
-        <div className="bg-white rounded-2xl shadow-xl p-8">
-          <h1 className="text-3xl font-bold text-center mb-2 text-gray-800">
+        <div className="bg-white rounded-2xl shadow-xl p-8 text-gray-900">
+          <h1 className="text-3xl font-bold text-center mb-2 text-gray-900">
             {t.auth.welcomeBack}
           </h1>
-          <p className="text-center text-gray-600 mb-8">{t.auth.signInToAccount}</p>
+          <p className="text-center text-gray-700 mb-8">{t.auth.signInToAccount}</p>
 
           {error && (
             <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-600 text-sm">
