@@ -46,12 +46,26 @@ body {
   color: #111827;
 }
 
-/* Ensure inputs and buttons have proper colors */
+/* Prevent auto-zoom on input focus (iOS Safari) - font-size must be >= 16px */
 input,
 textarea,
 select {
   color: #111827;
   background: white;
+  font-size: 16px !important;
+}
+
+/* Ensure inputs maintain 16px on mobile to prevent zoom */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
 }
 
 button {
@@ -92,6 +106,13 @@ button {
 [dir="rtl"] .mr-1 {
   margin-right: 0;
   margin-left: 0.25rem;
+}
+
+/* Prevent auto-zoom on input focus (iOS Safari) */
+input,
+textarea,
+select {
+  font-size: 16px !important;
 }
 
 /* Mobile-first responsive design */
