@@ -11,4 +11,3 @@ COMMENT ON COLUMN credits.expected_payment_date IS 'Expected date when payment w
 -- Create an index for better query performance
 CREATE INDEX IF NOT EXISTS idx_credits_expected_payment_date ON credits(expected_payment_date) WHERE expected_payment_date IS NOT NULL;
 
-a

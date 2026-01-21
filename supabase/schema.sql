@@ -54,6 +54,7 @@ CREATE TABLE credits (
   related_expense_id UUID REFERENCES expenses(id) ON DELETE SET NULL,
   status VARCHAR(20) NOT NULL DEFAULT 'open' CHECK (status IN ('open', 'partially_paid', 'settled')),
   due_date TIMESTAMP WITH TIME ZONE,
+  expected_payment_date TIMESTAMP WITH TIME ZONE,
   notes TEXT,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
