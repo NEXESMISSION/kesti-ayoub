@@ -1,0 +1,33 @@
+-- Create user account with specific UID
+-- This script should be run in Supabase SQL Editor after authentication is set up
+-- Note: In Supabase, users are created through the Auth system, not directly in the database
+-- This is a reference script for manual user creation if needed
+
+-- If you need to manually insert a user into auth.users (not recommended, use Supabase Auth instead):
+-- INSERT INTO auth.users (
+--   id,
+--   email,
+--   encrypted_password,
+--   email_confirmed_at,
+--   created_at,
+--   updated_at,
+--   raw_app_meta_data,
+--   raw_user_meta_data,
+--   is_super_admin,
+--   role
+-- ) VALUES (
+--   '98e5ee81-3721-4e05-89bf-f4910511d39b',
+--   'ayoub@gmail.com',
+--   crypt('temporary_password', gen_salt('bf')),
+--   NOW(),
+--   NOW(),
+--   NOW(),
+--   '{"provider": "email", "providers": ["email"]}',
+--   '{}',
+--   false,
+--   'authenticated'
+-- );
+
+-- Better approach: Use Supabase Dashboard or Auth API to create the user
+-- The user should sign up through the application or be created via Supabase Dashboard
+
