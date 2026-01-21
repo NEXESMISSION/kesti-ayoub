@@ -4,6 +4,7 @@ const withPWA = require('next-pwa')({
   skipWaiting: true,
   disable: process.env.NODE_ENV === 'development',
   buildExcludes: [/app-build-manifest\.json$/],
+  publicExcludes: ['!icon.svg', '!manifest.json'],
   runtimeCaching: [
     {
       urlPattern: /^https?.*/,
@@ -16,6 +17,7 @@ const withPWA = require('next-pwa')({
       },
     },
   ],
+  sw: 'sw.js',
 })
 
 /** @type {import('next').NextConfig} */
