@@ -116,7 +116,7 @@ export default function CreditsList() {
                 <span className="text-sm font-medium text-gray-700">{t.credits.receivables}</span>
               </div>
               <span className="text-xl font-bold text-green-600">
-                ${totalReceivables.toFixed(2)}
+                {totalReceivables.toFixed(2)} TD
               </span>
             </div>
             <p className="text-xs text-gray-600 mt-1">{receivables.length} {t.credits.openCount}</p>
@@ -129,7 +129,7 @@ export default function CreditsList() {
                 <span className="text-sm font-medium text-gray-700">{t.credits.payables}</span>
               </div>
               <span className="text-xl font-bold text-red-600">
-                ${totalPayables.toFixed(2)}
+                {totalPayables.toFixed(2)} TD
               </span>
             </div>
             <p className="text-xs text-gray-600 mt-1">{payables.length} {t.credits.openCount}</p>

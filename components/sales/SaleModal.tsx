@@ -263,7 +263,7 @@ export default function SaleModal({ sale, products, onClose, onSave }: SaleModal
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">{t.sales.totalAmount}:</span>
                 <span className="font-semibold text-lg text-green-600">
-                  ${(parseFloat(salePrice) * parseInt(quantity)).toFixed(2)}
+                  {(parseFloat(salePrice) * parseInt(quantity)).toFixed(2)} TD
                 </span>
               </div>
             </div>

@@ -124,12 +124,12 @@ export default function CreditCard({ credit, onEdit, onDelete }: CreditCardProps
         <div className="flex justify-between items-center">
           <div>
             <p className="text-sm text-gray-600">{t.credits.totalAmount}</p>
-            <p className="text-lg font-semibold text-gray-900">${credit.amount.toFixed(2)}</p>
+            <p className="text-lg font-semibold text-gray-900">{credit.amount.toFixed(2)} TD</p>
           </div>
           <div className="text-right">
             <p className="text-sm text-gray-600">{t.credits.remaining}</p>
             <p className={`text-lg font-bold ${isReceivable ? 'text-green-600' : 'text-red-600'}`}>
-              ${credit.remaining_balance.toFixed(2)}
+              {credit.remaining_balance.toFixed(2)} TD
             </p>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function CreditCard({ credit, onEdit, onDelete }: CreditCardProps
                     {payments.map((payment) => (
                       <div key={payment.id} className="flex justify-between items-center text-sm bg-white p-2 rounded border border-gray-200">
                         <div>
-                          <span className="font-medium">${payment.amount.toFixed(2)}</span>
+                          <span className="font-medium">{payment.amount.toFixed(2)} TD</span>
                           {payment.notes && (
                             <span className="text-gray-500 ml-2">- {payment.notes}</span>
                           )}

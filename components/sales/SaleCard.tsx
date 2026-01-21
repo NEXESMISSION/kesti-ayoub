@@ -26,10 +26,10 @@ export default function SaleCard({ sale, onEdit, onDelete }: SaleCardProps) {
           <div className="flex flex-wrap items-center gap-3 mt-2 text-sm text-gray-600">
             <span className="flex items-center">
               <DollarSign className="w-4 h-4 ml-1" />
-              ${sale.sale_price.toFixed(2)} × {sale.quantity}
+              {sale.sale_price.toFixed(2)} TD × {sale.quantity}
             </span>
             <span className="font-semibold text-green-600">
-              {t.sales.totalAmount}: ${total.toFixed(2)}
+              {t.sales.totalAmount}: {total.toFixed(2)} TD
             </span>
           </div>
         </div>

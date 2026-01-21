@@ -92,7 +92,7 @@ export default function ExpensesList() {
           </div>
           <div className="text-sm">
             <span className="text-gray-600">{t.common.total}: </span>
-            <span className="font-semibold text-red-600">${totalExpenses.toFixed(2)}</span>
+            <span className="font-semibold text-red-600">{totalExpenses.toFixed(2)} TD</span>
           </div>
         </div>
         <button

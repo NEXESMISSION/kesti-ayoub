@@ -211,7 +211,7 @@ export default function FinanceDashboard() {
             <span className="text-sm font-medium text-gray-600">{t.finance.totalSales}</span>
             <DollarSign className="w-5 h-5 text-green-600" />
           </div>
-          <p className="text-3xl font-bold text-gray-900">${summary.totalSales.toFixed(2)}</p>
+          <p className="text-3xl font-bold text-gray-900">{summary.totalSales.toFixed(2)} TD</p>
         </div>
 
         <div className="bg-white rounded-lg border border-gray-200 p-6">
@@ -219,7 +219,7 @@ export default function FinanceDashboard() {
             <span className="text-sm font-medium text-gray-600">{t.finance.totalExpenses}</span>
             <TrendingDown className="w-5 h-5 text-red-600" />
           </div>
-          <p className="text-3xl font-bold text-red-600">${summary.totalExpenses.toFixed(2)}</p>
+          <p className="text-3xl font-bold text-red-600">{summary.totalExpenses.toFixed(2)} TD</p>
         </div>
 
         <div className="bg-white rounded-lg border border-gray-200 p-6">
@@ -228,7 +228,7 @@ export default function FinanceDashboard() {
             <TrendingUp className={`w-5 h-5 ${summary.netProfit >= 0 ? 'text-green-600' : 'text-red-600'}`} />
           </div>
           <p className={`text-3xl font-bold ${summary.netProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-            ${summary.netProfit.toFixed(2)}
+            {summary.netProfit.toFixed(2)} TD
           </p>
         </div>
 
@@ -237,7 +237,7 @@ export default function FinanceDashboard() {
             <span className="text-sm font-medium text-gray-700">{t.finance.receivables}</span>
             <ArrowDownCircle className="w-5 h-5 text-green-600" />
           </div>
-          <p className="text-3xl font-bold text-green-600">${summary.outstandingReceivables.toFixed(2)}</p>
+          <p className="text-3xl font-bold text-green-600">{summary.outstandingReceivables.toFixed(2)} TD</p>
           <p className="text-xs text-gray-600 mt-1">{t.finance.moneyOwedToYou}</p>
         </div>
 
@@ -246,7 +246,7 @@ export default function FinanceDashboard() {
             <span className="text-sm font-medium text-gray-700">{t.finance.payables}</span>
             <ArrowUpCircle className="w-5 h-5 text-red-600" />
           </div>
-          <p className="text-3xl font-bold text-red-600">${summary.outstandingPayables.toFixed(2)}</p>
+          <p className="text-3xl font-bold text-red-600">{summary.outstandingPayables.toFixed(2)} TD</p>
           <p className="text-xs text-gray-600 mt-1">{t.finance.moneyYouOwe}</p>
         </div>
 
@@ -256,7 +256,7 @@ export default function FinanceDashboard() {
             <DollarSign className={`w-5 h-5 ${summary.cashFlow >= 0 ? 'text-green-600' : 'text-red-600'}`} />
           </div>
           <p className={`text-3xl font-bold ${summary.cashFlow >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-            ${summary.cashFlow.toFixed(2)}
+            {summary.cashFlow.toFixed(2)} TD
           </p>
           <p className="text-xs text-gray-600 mt-1">{t.finance.cashSalesMinusExpenses}</p>
         </div>

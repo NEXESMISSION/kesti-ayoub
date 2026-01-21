@@ -52,7 +52,7 @@ export default function ExpenseCard({ expense, onEdit, onDelete }: ExpenseCardPr
           {format(new Date(expense.expense_date), 'MMM dd, yyyy')}
         </div>
         <div className="text-xl font-bold text-red-600">
-          ${expense.amount.toFixed(2)}
+          {expense.amount.toFixed(2)} TD
         </div>
       </div>
 

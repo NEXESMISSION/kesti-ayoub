@@ -117,7 +117,7 @@ export default function SalesList() {
           </div>
           <div className="text-sm">
             <span className="text-gray-600">{t.sales.totalRevenue}: </span>
-            <span className="font-semibold text-green-600">${totalRevenue.toFixed(2)}</span>
+            <span className="font-semibold text-green-600">{totalRevenue.toFixed(2)} TD</span>
           </div>
         </div>
         <button

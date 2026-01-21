@@ -161,7 +161,7 @@ export default function DashboardOverview() {
             <span className="text-sm font-medium text-gray-700">{t.dashboard.totalSales}</span>
             <TrendingUp className="w-5 h-5 text-green-600" />
           </div>
-          <p className="text-3xl font-bold text-green-600">${stats.totalSales.toFixed(2)}</p>
+          <p className="text-3xl font-bold text-green-600">{stats.totalSales.toFixed(2)} TD</p>
         </div>
 
         <div className="bg-red-50 rounded-lg border border-red-200 p-6">
@@ -169,7 +169,7 @@ export default function DashboardOverview() {
             <span className="text-sm font-medium text-gray-700">{t.dashboard.totalExpenses}</span>
             <TrendingDown className="w-5 h-5 text-red-600" />
           </div>
-          <p className="text-3xl font-bold text-red-600">${stats.totalExpenses.toFixed(2)}</p>
+          <p className="text-3xl font-bold text-red-600">{stats.totalExpenses.toFixed(2)} TD</p>
         </div>
 
         <div className={`rounded-lg border p-6 ${
@@ -188,7 +188,7 @@ export default function DashboardOverview() {
           <p className={`text-3xl font-bold ${
             netProfit >= 0 ? 'text-green-600' : 'text-red-600'
           }`}>
-            ${netProfit.toFixed(2)}
+            {netProfit.toFixed(2)} TD
           </p>
         </div>
       </div>
