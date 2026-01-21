@@ -143,6 +143,7 @@ export const ar = {
     all: 'الكل',
     totalAmount: 'المبلغ الإجمالي',
     remaining: 'المتبقي',
+    whenToGetPaid: 'متى سأحصل على الدفع',
   },
   
   // Finance

@@ -102,6 +102,12 @@ export default function CreditCard({ credit, onEdit, onDelete }: CreditCardProps
                 {t.credits.dueDate}: {format(new Date(credit.due_date), 'MMM dd, yyyy')}
               </span>
             )}
+            {credit.type === 'owed_to_me' && credit.expected_payment_date && (
+              <span className="flex items-center text-blue-600">
+                <Calendar className="w-4 h-4 ml-1" />
+                {t.credits.whenToGetPaid}: {format(new Date(credit.expected_payment_date), 'MMM dd, yyyy')}
+              </span>
+            )}
           </div>
         </div>
         <div className="flex space-x-2">

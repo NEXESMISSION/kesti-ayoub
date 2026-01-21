@@ -18,6 +18,7 @@ export default function CreditModal({ credit, onClose, onSave }: CreditModalProp
   const [type, setType] = useState<'owed_to_me' | 'i_owe'>('owed_to_me')
   const [amount, setAmount] = useState('')
   const [dueDate, setDueDate] = useState('')
+  const [expectedPaymentDate, setExpectedPaymentDate] = useState('')
   const [notes, setNotes] = useState('')
   const [loading, setLoading] = useState(false)
 
@@ -27,7 +28,15 @@ export default function CreditModal({ credit, onClose, onSave }: CreditModalProp
       setType(credit.type)
       setAmount(credit.amount.toString())
       setDueDate(credit.due_date ? credit.due_date.split('T')[0] : '')
+      setExpectedPaymentDate(credit.expected_payment_date ? credit.expected_payment_date.split('T')[0] : '')
       setNotes(credit.notes || '')
+    } else {
+      setPersonName('')
+      setType('owed_to_me')
+      setAmount('')
+      setDueDate('')
+      setExpectedPaymentDate('')
+      setNotes('')
     }
   }, [credit])
 
@@ -45,6 +54,7 @@ export default function CreditModal({ credit, onClose, onSave }: CreditModalProp
       amount: parseFloat(amount),
       remaining_balance: parseFloat(amount),
       due_date: dueDate ? new Date(dueDate).toISOString() : null,
+      expected_payment_date: expectedPaymentDate ? new Date(expectedPaymentDate).toISOString() : null,
       notes: notes || null,
       status: 'open' as const,
       user_id: user.id,
@@ -168,6 +178,20 @@ export default function CreditModal({ credit, onClose, onSave }: CreditModalProp
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
             />
           </div>
+
+          {type === 'owed_to_me' && (
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {t.credits.whenToGetPaid}
+              </label>
+              <input
+                type="date"
+                value={expectedPaymentDate}
+                onChange={(e) => setExpectedPaymentDate(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+              />
+            </div>
+          )}
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">

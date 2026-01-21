@@ -48,6 +48,7 @@ export interface Credit {
   related_expense_id?: string
   status: 'open' | 'partially_paid' | 'settled'
   due_date?: string
+  expected_payment_date?: string
   notes?: string
   created_at: string
   updated_at: string
